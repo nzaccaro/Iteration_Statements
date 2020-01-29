@@ -25,9 +25,9 @@ namespace Iteration_Statements
                 int value = int.Parse(input);
 
                 //creates integer variable for while loop statement
-                int count = 0;
+                int count = 1;
 
-                while (count < value)
+                while (count <= value)
                 {
                     //Displays entered user value and current integer value in loop
                     Console.WriteLine("You have entered " + value.ToString() + ". " + "This is the current integer value in the loop: " + count.ToString());
@@ -38,9 +38,14 @@ namespace Iteration_Statements
             }
             catch
             {
+                /* Displays the user with an error message stating that the user entered an incorrect 
+                 * data type, to enter an integer, and to exit the program and try again
+                */
                 Console.WriteLine("You have entered an incorrect data type :(");
                 Console.WriteLine("Please enter an integer between 1 and 100");
                 Console.WriteLine("To try again, exit the program by pressing any key!");
+                
+                //Reads for the user to press any key
                 Console.ReadKey(true);
             }
         }
