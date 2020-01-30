@@ -26,14 +26,25 @@ namespace Iteration_Statements
 
                 //creates integer variable for while loop statement
                 int count = 1;
-
-                while (count <= value)
+                
+                //check if value is between parameters
+                if ((value >= 1) && (value <= 100))
                 {
-                    //Displays entered user value and current integer value in loop
-                    Console.WriteLine("You have entered " + value.ToString() + ". " + "This is the current integer value in the loop: " + count.ToString());
+                    while (count <= value)
+                    {
+                        //Displays entered user value and current integer value in loop
+                        Console.WriteLine("You have entered " + value.ToString() + ". " + "This is the current integer value in the loop: " + count.ToString());
 
-                    //increase loop count
-                    count++;
+                        //increase loop count
+                        count++;
+                    }
+                }
+
+                else
+                {
+                    Console.WriteLine("You have entered an integer not within the parameters:(");
+                    Console.WriteLine("Please enter an integer between 1 and 100");
+                    Console.WriteLine("To try again, exit the program by pressing any key!");
                 }
             }
             catch
